@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-danger-lighter: #ffa1a1;
+  --color-danger-default: #ac1717;
+  --color-danger-darker: #831919;
+  --color-danger-50: #fff1f1;
+  --color-danger-100: #ffe1e1;
+  --color-danger-200: #ffc8c8;
+  --color-danger-300: #ffa1a1;
+  --color-danger-400: #fe6b6b;
+  --color-danger-500: #f73c3c;
+  --color-danger-600: #e41e1e;
+  --color-danger-700: #c01515;
+  --color-danger-800: #ac1717;
+  --color-danger-900: #831919;
+  --color-danger-950: #480707;
+
+  --color-primary-lighter: #a8dd79;
+  --color-primary-default: #68af30;
+  --color-primary-darker: #35561e;
+  --color-primary-50: #f3fbea;
+  --color-primary-100: #e4f5d2;
+  --color-primary-200: #caecaa;
+  --color-primary-300: #a8dd79;
+  --color-primary-400: #89cc4f;
+  --color-primary-500: #68af30;
+  --color-primary-600: #508d23;
+  --color-primary-700: #3e6c1f;
+  --color-primary-800: #35561e;
+  --color-primary-900: #2e4a1d;
+  --color-primary-950: #15280b;
+
+  --color-warning-lighter: #e1e95b;
+  --color-warning-default: #ceca21;
+  --color-warning-darker: #78601b;
+  --color-warning-50: #fafcea;
+  --color-warning-100: #f1f7ca;
+  --color-warning-200: #e8f197;
+  --color-warning-300: #e1e95b;
+  --color-warning-400: #dce02f;
+  --color-warning-500: #ceca21;
+  --color-warning-600: #b4a41a;
+  --color-warning-700: #907918;
+  --color-warning-800: #78601b;
+  --color-warning-900: #66501d;
+  --color-warning-950: #3b2b0d;
+
+  --color-dark-lighter: #b0b0b0;
+  --color-dark-default: #3d3d3d;
+  --color-dark-darker: #000000;
+  --color-dark-50: #f6f6f6;
+  --color-dark-100: #e7e7e7;
+  --color-dark-200: #d1d1d1;
+  --color-dark-300: #b0b0b0;
+  --color-dark-400: #888888;
+  --color-dark-500: #6d6d6d;
+  --color-dark-600: #5d5d5d;
+  --color-dark-700: #4f4f4f;
+  --color-dark-800: #454545;
+  --color-dark-900: #3d3d3d;
+  --color-dark-950: #000000;
+
+  --color-gray-lighter: #edeff2;
+  --color-gray-default: #76788c;
+  --color-gray-darker: #51525e;
+  --color-gray-50: #f5f7f8;
+  --color-gray-100: #edeff2;
+  --color-gray-200: #dfe1e6;
+  --color-gray-300: #d1d5dc;
+  --color-gray-400: #b4b8c5;
+  --color-gray-500: #a0a4b4;
+  --color-gray-600: #8a8da1;
+  --color-gray-700: #76788c;
+  --color-gray-800: #616372;
+  --color-gray-900: #51525e;
+  --color-gray-950: #303136;
+
+  --color-ocean-lighter: oklch(0.9 0.08 240);
+  --color-ocean-default: oklch(0.5 0.22 240);
+  --color-ocean-darker: oklch(0.4 0.18 240);
+  --color-ocean-50: oklch(0.97 0.02 240);
+  --color-ocean-100: oklch(0.95 0.04 240);
+  --color-ocean-200: oklch(0.9 0.08 240);
+  --color-ocean-300: oklch(0.85 0.12 240);
+  --color-ocean-400: oklch(0.75 0.18 240);
+  --color-ocean-500: oklch(0.65 0.22 240);
+  --color-ocean-600: oklch(0.55 0.26 240);
+  --color-ocean-700: oklch(0.5 0.22 240);
+  --color-ocean-800: oklch(0.45 0.2 240);
+  --color-ocean-900: oklch(0.4 0.18 240);
+  --color-ocean-950: oklch(0.3 0.16 240);
+
+  --font-regular: "Nunito Regular", sans-serif;
+  --font-italic: "Nunito Italic", sans-serif;
+  --font-black: "Nunito Black", sans-serif;
+  --font-black-italic: "Nunito Black Italic", sans-serif;
+  --font-bold: "Nunito Bold", sans-serif;
+  --font-bold-italic: "Nunito Bold Italic", sans-serif;
+  --font-semibold: "Nunito SemiBold", sans-serif;
+  --font-semibold-italic: "Nunito SemiBold Italic", sans-serif;
+  --font-extrabold: "Nunito ExtraBold", sans-serif;
+  --font-extrabold-italic: "Nunito ExtraBold Italic", sans-serif;
+  --font-light: "Nunito Light", sans-serif;
+  --font-light-italic: "Nunito Light Italic", sans-serif;
+  --font-extralight: "Nunito Extra Light", sans-serif;
+  --font-extralight-italic: "Nunito Extra Light Italic", sans-serif;
+  --font-medium: "Nunito Medium", sans-serif;
+  --font-medium-italic: "Nunito Medium Italic", sans-serif;
+
+  --text-md: 16px;
+
+  --tracking-075: 0.75px;
+
+  --tw-bg-opacity: 1;
+}
+
+@layer components {
+  .icon {
+    @apply cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out;
+  }
+
+  .padding-layout {
+    @apply lg:px-[10%] px-[4.1%];
+  }
+
+  .box-shadow {
+    box-shadow: 0px 0px 4px 0px rgba(87, 87, 87, 0.24);
+  }
+}
