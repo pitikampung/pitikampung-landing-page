@@ -11,13 +11,12 @@ export class UseCase implements IUseCase {
 
   products = async (params: IRequestProduct) => {
     try {
-      console.log(params, " -->><< params params");
       const { code, data } = await this.repository.products(params);
       if (data?.length && code === 200) {
         return data;
       }
       return [];
-    } catch (_) {
+    } catch (error) {
       return [];
     }
   };

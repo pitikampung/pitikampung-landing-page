@@ -18,7 +18,7 @@ export const ProductView = () => {
   const [search, setSearch] = useState<string>("");
 
   const {
-    products: { data: data, hasNextPage, isLoading, fetchNextPage, refetch },
+    products: { data: data, hasNextPage, isLoading, fetchNextPage },
   } = useProduct("products", {
     limit: LIMIT,
     page: 1,
@@ -27,6 +27,7 @@ export const ProductView = () => {
   console.log(hasNextPage);
   console.log(data?.pages?.flatMap((page) => page)?.length || 0);
 
+  // eslint-disable-next-line
   const onFilter = (payload?: IFilter) => {
     // if (!payload) {
     //   return setData(products);

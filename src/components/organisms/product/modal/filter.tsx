@@ -2,11 +2,8 @@
 
 import { Button } from "@/components/atoms";
 import { DialogDrawer, InputText } from "@/components/molecules";
-import {
-  IFilter,
-  TProductCategory,
-  TProductSize,
-} from "@/packages/product/domain/product";
+import { IFilter } from "@/packages/product/domain/product";
+import { TProductCategory, TProductSize } from "@/shared/domain/product";
 import { Filter } from "lucide-react";
 import React, { FC, useEffect, useState } from "react";
 

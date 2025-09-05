@@ -39,6 +39,7 @@ export const InputText = ({
     if (value && !inputState) {
       onChange({ target: { value } } as ChangeEvent<HTMLInputElement>);
     }
+    // eslint-disable-next-line
   }, [value, inputState]);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {

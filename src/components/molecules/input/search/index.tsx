@@ -33,7 +33,11 @@ const InputTextSearch: FC<InputTextSearchProps> = ({
 
   const onChangeText = (value: string) => {
     setKeyword(value);
-    typeof value === "string" && value ? debounce(value) : setSearch("", true);
+    if (typeof value === "string" && value) {
+      debounce(value);
+    } else {
+      setSearch("", true);
+    }
   };
 
   return (
@@ -75,7 +79,9 @@ const InputTextSearch: FC<InputTextSearchProps> = ({
           )
         }
         onEnter={() => {
-          onEnter && onEnter(delayDebounce ? keyword : search);
+          if (onEnter) {
+            onEnter(delayDebounce ? keyword : search);
+          }
           setIsShowSuggestion(false);
         }}
       />
